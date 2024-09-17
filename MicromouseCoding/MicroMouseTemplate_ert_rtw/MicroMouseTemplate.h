@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 3.5
+ * Model version                  : 3.11
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Thu Sep 12 15:52:56 2024
+ * C/C++ source code generated on : Tue Sep 17 12:01:14 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -69,8 +69,8 @@ typedef struct {
 
 /* Block signals (default storage) */
 typedef struct {
-  uint16_T CastToDouble[8];            /* '<S53>/Cast To Double' */
   uint16_T Flip[8];                    /* '<S6>/Flip' */
+  uint16_T CastToDouble[8];            /* '<S53>/Cast To Double' */
   GPIO_TypeDef * portNameLoc;
   real_T maxV;
   real_T maxV_m;
@@ -84,12 +84,6 @@ typedef struct {
   boolean_T LED0;                      /* '<Root>/HelloMicroMouse!' */
   boolean_T LED_DOWN_L;                /* '<Root>/HelloMicroMouse!' */
   boolean_T LED_DOWN_R;                /* '<Root>/HelloMicroMouse!' */
-  boolean_T LED_FWD_L;                 /* '<Root>/HelloMicroMouse!' */
-  boolean_T LED_FWD_R;                 /* '<Root>/HelloMicroMouse!' */
-  boolean_T LED_L;                     /* '<Root>/HelloMicroMouse!' */
-  boolean_T LED_MOT_L;                 /* '<Root>/HelloMicroMouse!' */
-  boolean_T LED_MOT_R;                 /* '<Root>/HelloMicroMouse!' */
-  boolean_T LED_R;                     /* '<Root>/HelloMicroMouse!' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem6;/* '<S51>/MATLAB System1' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem5;/* '<S51>/MATLAB System1' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem4_c;/* '<S51>/MATLAB System1' */
@@ -109,6 +103,8 @@ typedef struct {
   stm32cube_blocks_AnalogInput__T obj; /* '<S50>/Analog to Digital Converter' */
   stm32cube_blocks_PWMOutput_Mi_T obj_g;/* '<S46>/PWM Output' */
   stm32cube_blocks_PWMOutput_Mi_T obj_n;/* '<S44>/PWM Output' */
+  real_T TH_R;                         /* '<Root>/HelloMicroMouse!' */
+  real_T TH_L;                         /* '<Root>/HelloMicroMouse!' */
   struct {
     uint_T is_c2_MicroMouseTemplate:2; /* '<Root>/HelloMicroMouse!' */
     uint_T is_ButtonPressed:2;         /* '<Root>/HelloMicroMouse!' */
@@ -117,7 +113,6 @@ typedef struct {
 
   int8_T If1_ActiveSubsystem;          /* '<S5>/If1' */
   int8_T If_ActiveSubsystem;           /* '<S5>/If' */
-  uint8_T temporalCounter_i1;          /* '<Root>/HelloMicroMouse!' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem6;/* '<S51>/MATLAB System1' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem5;/* '<S51>/MATLAB System1' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem4_c;/* '<S51>/MATLAB System1' */
