@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 4.8
+ * Model version                  : 4.9
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Tue Sep 17 16:50:26 2024
+ * C/C++ source code generated on : Tue Sep 17 19:21:33 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -77,7 +77,7 @@ typedef struct tag_tsKyPuhWUdS8zBSeRGR2aC stm32cube_blocks_DigitalPortW_T;
 
 #endif                             /* typedef_stm32cube_blocks_DigitalPortW_T */
 
-/* Custom Type definition for MATLABSystem: '<S46>/PWM Output' */
+/* Custom Type definition for MATLABSystem: '<S49>/PWM Output' */
 #include "stm_timer_ll.h"
 #include "stm_timer_ll.h"
 #ifndef struct_tag_0RzKA0TA5eXyA1b3sjyvMG
@@ -100,7 +100,7 @@ typedef struct tag_0RzKA0TA5eXyA1b3sjyvMG stm32cube_blocks_PWMOutput_Mi_T;
 
 #endif                             /* typedef_stm32cube_blocks_PWMOutput_Mi_T */
 
-/* Custom Type definition for MATLABSystem: '<S50>/Analog to Digital Converter' */
+/* Custom Type definition for MATLABSystem: '<S53>/Analog to Digital Converter' */
 #include "stm_adc_ll.h"
 #include "stm_adc_ll.h"
 #ifndef struct_tag_GSKovyH6bCN42HwFzVB4DE
@@ -141,10 +141,10 @@ typedef struct tag_fcb3pacyRZnTE3oJedgOZD stm32cube_blocks_AnalogInput__T;
 
 #endif                             /* typedef_stm32cube_blocks_AnalogInput__T */
 
-/* Parameters for system: '<S51>/MATLAB System1' */
+/* Parameters for system: '<S54>/MATLAB System1' */
 typedef struct P_MATLABSystem1_MicroMouseTem_T_ P_MATLABSystem1_MicroMouseTem_T;
 
-/* Parameters for system: '<S51>/MATLAB System3' */
+/* Parameters for system: '<S54>/MATLAB System3' */
 typedef struct P_MATLABSystem3_MicroMouseTem_T_ P_MATLABSystem3_MicroMouseTem_T;
 
 /* Parameters (default storage) */
