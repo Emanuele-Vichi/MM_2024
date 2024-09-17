@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 3.11
- * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Tue Sep 17 12:01:14 2024
+ * Model version                  : 4.8
+ * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
+ * C/C++ source code generated on : Tue Sep 17 16:50:26 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -22,68 +22,68 @@
 #include "rtwtypes.h"
 #include "stm_timer_ll.h"
 #include "stm_adc_ll.h"
-#ifndef struct_tag_TL74IR3Rn74hKhfKckCIBC
-#define struct_tag_TL74IR3Rn74hKhfKckCIBC
+#ifndef struct_tag_eC52lkJydh6hRqpmhZj8WB
+#define struct_tag_eC52lkJydh6hRqpmhZj8WB
 
-struct tag_TL74IR3Rn74hKhfKckCIBC
+struct tag_eC52lkJydh6hRqpmhZj8WB
 {
   int32_T isInitialized;
   real_T InitialCondition;
   real_T Buffer[25];
 };
 
-#endif                                 /* struct_tag_TL74IR3Rn74hKhfKckCIBC */
+#endif                                 /* struct_tag_eC52lkJydh6hRqpmhZj8WB */
 
 #ifndef typedef_CircularBuffer_MicroMouseTemp_T
 #define typedef_CircularBuffer_MicroMouseTemp_T
 
-typedef struct tag_TL74IR3Rn74hKhfKckCIBC CircularBuffer_MicroMouseTemp_T;
+typedef struct tag_eC52lkJydh6hRqpmhZj8WB CircularBuffer_MicroMouseTemp_T;
 
 #endif                             /* typedef_CircularBuffer_MicroMouseTemp_T */
 
-#ifndef struct_tag_v2DAHo7klwgURvzbuzh8NC
-#define struct_tag_v2DAHo7klwgURvzbuzh8NC
+#ifndef struct_tag_CjAmlDaMTaPFsSUtvXbyaE
+#define struct_tag_CjAmlDaMTaPFsSUtvXbyaE
 
-struct tag_v2DAHo7klwgURvzbuzh8NC
+struct tag_CjAmlDaMTaPFsSUtvXbyaE
 {
   int32_T isInitialized;
   real_T InitialCondition;
   real_T Buffer[10];
 };
 
-#endif                                 /* struct_tag_v2DAHo7klwgURvzbuzh8NC */
+#endif                                 /* struct_tag_CjAmlDaMTaPFsSUtvXbyaE */
 
 #ifndef typedef_CircularBuffer_MicroMouseTe_p_T
 #define typedef_CircularBuffer_MicroMouseTe_p_T
 
-typedef struct tag_v2DAHo7klwgURvzbuzh8NC CircularBuffer_MicroMouseTe_p_T;
+typedef struct tag_CjAmlDaMTaPFsSUtvXbyaE CircularBuffer_MicroMouseTe_p_T;
 
 #endif                             /* typedef_CircularBuffer_MicroMouseTe_p_T */
 
-#ifndef struct_tag_S5MMpcz8vT0FlmhmEl4q5C
-#define struct_tag_S5MMpcz8vT0FlmhmEl4q5C
+#ifndef struct_tag_tsKyPuhWUdS8zBSeRGR2aC
+#define struct_tag_tsKyPuhWUdS8zBSeRGR2aC
 
-struct tag_S5MMpcz8vT0FlmhmEl4q5C
+struct tag_tsKyPuhWUdS8zBSeRGR2aC
 {
   int32_T isInitialized;
 };
 
-#endif                                 /* struct_tag_S5MMpcz8vT0FlmhmEl4q5C */
+#endif                                 /* struct_tag_tsKyPuhWUdS8zBSeRGR2aC */
 
 #ifndef typedef_stm32cube_blocks_DigitalPortW_T
 #define typedef_stm32cube_blocks_DigitalPortW_T
 
-typedef struct tag_S5MMpcz8vT0FlmhmEl4q5C stm32cube_blocks_DigitalPortW_T;
+typedef struct tag_tsKyPuhWUdS8zBSeRGR2aC stm32cube_blocks_DigitalPortW_T;
 
 #endif                             /* typedef_stm32cube_blocks_DigitalPortW_T */
 
 /* Custom Type definition for MATLABSystem: '<S46>/PWM Output' */
 #include "stm_timer_ll.h"
 #include "stm_timer_ll.h"
-#ifndef struct_tag_C3ug75osl8w3UN1OXa3ipB
-#define struct_tag_C3ug75osl8w3UN1OXa3ipB
+#ifndef struct_tag_0RzKA0TA5eXyA1b3sjyvMG
+#define struct_tag_0RzKA0TA5eXyA1b3sjyvMG
 
-struct tag_C3ug75osl8w3UN1OXa3ipB
+struct tag_0RzKA0TA5eXyA1b3sjyvMG
 {
   boolean_T matlabCodegenIsDeleted;
   int32_T isInitialized;
@@ -91,39 +91,39 @@ struct tag_C3ug75osl8w3UN1OXa3ipB
   TIM_Type_T* TimerHandle;
 };
 
-#endif                                 /* struct_tag_C3ug75osl8w3UN1OXa3ipB */
+#endif                                 /* struct_tag_0RzKA0TA5eXyA1b3sjyvMG */
 
 #ifndef typedef_stm32cube_blocks_PWMOutput_Mi_T
 #define typedef_stm32cube_blocks_PWMOutput_Mi_T
 
-typedef struct tag_C3ug75osl8w3UN1OXa3ipB stm32cube_blocks_PWMOutput_Mi_T;
+typedef struct tag_0RzKA0TA5eXyA1b3sjyvMG stm32cube_blocks_PWMOutput_Mi_T;
 
 #endif                             /* typedef_stm32cube_blocks_PWMOutput_Mi_T */
 
 /* Custom Type definition for MATLABSystem: '<S50>/Analog to Digital Converter' */
 #include "stm_adc_ll.h"
 #include "stm_adc_ll.h"
-#ifndef struct_tag_wiywjhRn0JhvylthmapQgB
-#define struct_tag_wiywjhRn0JhvylthmapQgB
+#ifndef struct_tag_GSKovyH6bCN42HwFzVB4DE
+#define struct_tag_GSKovyH6bCN42HwFzVB4DE
 
-struct tag_wiywjhRn0JhvylthmapQgB
+struct tag_GSKovyH6bCN42HwFzVB4DE
 {
   int32_T isInitialized;
 };
 
-#endif                                 /* struct_tag_wiywjhRn0JhvylthmapQgB */
+#endif                                 /* struct_tag_GSKovyH6bCN42HwFzVB4DE */
 
 #ifndef typedef_stm32cube_blocks_DigitalPortR_T
 #define typedef_stm32cube_blocks_DigitalPortR_T
 
-typedef struct tag_wiywjhRn0JhvylthmapQgB stm32cube_blocks_DigitalPortR_T;
+typedef struct tag_GSKovyH6bCN42HwFzVB4DE stm32cube_blocks_DigitalPortR_T;
 
 #endif                             /* typedef_stm32cube_blocks_DigitalPortR_T */
 
-#ifndef struct_tag_6dsyvroagB27OCKFoJuL7
-#define struct_tag_6dsyvroagB27OCKFoJuL7
+#ifndef struct_tag_fcb3pacyRZnTE3oJedgOZD
+#define struct_tag_fcb3pacyRZnTE3oJedgOZD
 
-struct tag_6dsyvroagB27OCKFoJuL7
+struct tag_fcb3pacyRZnTE3oJedgOZD
 {
   boolean_T matlabCodegenIsDeleted;
   int32_T isInitialized;
@@ -132,12 +132,12 @@ struct tag_6dsyvroagB27OCKFoJuL7
   uint16_T ADCInternalBuffer[18];
 };
 
-#endif                                 /* struct_tag_6dsyvroagB27OCKFoJuL7 */
+#endif                                 /* struct_tag_fcb3pacyRZnTE3oJedgOZD */
 
 #ifndef typedef_stm32cube_blocks_AnalogInput__T
 #define typedef_stm32cube_blocks_AnalogInput__T
 
-typedef struct tag_6dsyvroagB27OCKFoJuL7 stm32cube_blocks_AnalogInput__T;
+typedef struct tag_fcb3pacyRZnTE3oJedgOZD stm32cube_blocks_AnalogInput__T;
 
 #endif                             /* typedef_stm32cube_blocks_AnalogInput__T */
 

@@ -1,28 +1,28 @@
--IC:/Users/emanu/Documents/MM_2024/MicromouseCoding
--IC:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include
--IC:/Users/emanu/Documents/MM_2024/MicromouseCoding/MicroMouseTemplate_ert_rtw/instrumented
--IC:/Users/emanu/Documents/MM_2024/MicromouseCoding/MicroMouseProgramming/Core/Inc
--IC:/Users/emanu/Documents/MM_2024/MicromouseCoding/MicroMouseProgramming/Core/Src/instrumented
--IC:/Program\ Files/MATLAB/R2024a/extern/include
--IC:/Program\ Files/MATLAB/R2024a/simulink/include
--IC:/Program\ Files/MATLAB/R2024a/rtw/c/src
--IC:/Program\ Files/MATLAB/R2024a/rtw/c/src/ext_mode/common
--IC:/Program\ Files/MATLAB/R2024a/rtw/c/ert
--IC:/Program\ Files/MATLAB/R2024a/toolbox/target/shared/armcortexmbase/scheduler/include
--IC:/Program\ Files/MATLAB/R2024a/toolbox/target/shared/armcortexmbase/xcp/include
--IC:/Program\ Files/MATLAB/R2024a/rtw/c/src/ext_mode/serial
--IC:/Program\ Files/MATLAB/R2024a/toolbox/target/shared/svd/common/include
--IC:/ProgramData/MATLAB/SupportPackages/R2024a/3P.instrset/cmsis.instrset/CMSIS/Core/Include
--IC:/ProgramData/MATLAB/SupportPackages/R2024a/3P.instrset/cmsis_dsp.instrset/Include
--IC:/ProgramData/MATLAB/SupportPackages/R2024a/3P.instrset/cmsis_dsp.instrset/Include/dsp
--IC:/Users/emanu/Documents/MM_2024/MicromouseCoding/MicroMouseProgramming/Drivers/STM32L4xx_HAL_Driver/Inc
--IC:/Users/emanu/Documents/MM_2024/MicromouseCoding/MicroMouseProgramming/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy
--IC:/Users/emanu/Documents/MM_2024/MicromouseCoding/MicroMouseProgramming/Middlewares/ST/STM32_USB_Device_Library/Core/Inc
--IC:/Users/emanu/Documents/MM_2024/MicromouseCoding/MicroMouseProgramming/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc
--IC:/Users/emanu/Documents/MM_2024/MicromouseCoding/MicroMouseProgramming/Drivers/CMSIS/Device/ST/STM32L4xx/Include
--IC:/Users/emanu/Documents/MM_2024/MicromouseCoding/MicroMouseProgramming/Drivers/CMSIS/Include
--IC:/Users/emanu/Documents/MM_2024/MicromouseCoding/MicroMouseProgramming/USB_DEVICE/App/instrumented
--IC:/Users/emanu/Documents/MM_2024/MicromouseCoding/MicroMouseProgramming/USB_DEVICE/Target/instrumented
+-IC:/Users/emanu/Documents/MM_2024/MM_2024/MicromouseCoding
+-IC:/ProgramData/MATLAB/SupportPackages/R2024b/toolbox/shared/supportpackages/stm32/include
+-IC:/Users/emanu/Documents/MM_2024/MM_2024/MicromouseCoding/MicroMouseTemplate_ert_rtw/instrumented
+-IC:/Users/emanu/Documents/MM_2024/MM_2024/MicromouseCoding/MicroMouseProgramming/Core/Inc
+-IC:/Users/emanu/Documents/MM_2024/MM_2024/MicromouseCoding/MicroMouseProgramming/Core/Src/instrumented
+-I"C:/Program Files/MATLAB/R2024b/extern/include"
+-I"C:/Program Files/MATLAB/R2024b/simulink/include"
+-I"C:/Program Files/MATLAB/R2024b/rtw/c/src"
+-I"C:/Program Files/MATLAB/R2024b/rtw/c/src/ext_mode/common"
+-I"C:/Program Files/MATLAB/R2024b/rtw/c/ert"
+-I"C:/Program Files/MATLAB/R2024b/toolbox/target/shared/armcortexmbase/scheduler/include"
+-I"C:/Program Files/MATLAB/R2024b/toolbox/target/shared/armcortexmbase/xcp/include"
+-I"C:/Program Files/MATLAB/R2024b/rtw/c/src/ext_mode/serial"
+-I"C:/Program Files/MATLAB/R2024b/toolbox/target/shared/svd/common/include"
+-IC:/ProgramData/MATLAB/SupportPackages/R2024b/3P.instrset/cmsis.instrset/CMSIS/Core/Include
+-IC:/ProgramData/MATLAB/SupportPackages/R2024b/3P.instrset/cmsis_dsp.instrset/Include
+-IC:/ProgramData/MATLAB/SupportPackages/R2024b/3P.instrset/cmsis_dsp.instrset/Include/dsp
+-IC:/Users/emanu/Documents/MM_2024/MM_2024/MicromouseCoding/MicroMouseProgramming/Drivers/STM32L4xx_HAL_Driver/Inc
+-IC:/Users/emanu/Documents/MM_2024/MM_2024/MicromouseCoding/MicroMouseProgramming/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy
+-IC:/Users/emanu/Documents/MM_2024/MM_2024/MicromouseCoding/MicroMouseProgramming/Middlewares/ST/STM32_USB_Device_Library/Core/Inc
+-IC:/Users/emanu/Documents/MM_2024/MM_2024/MicromouseCoding/MicroMouseProgramming/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc
+-IC:/Users/emanu/Documents/MM_2024/MM_2024/MicromouseCoding/MicroMouseProgramming/Drivers/CMSIS/Device/ST/STM32L4xx/Include
+-IC:/Users/emanu/Documents/MM_2024/MM_2024/MicromouseCoding/MicroMouseProgramming/Drivers/CMSIS/Include
+-IC:/Users/emanu/Documents/MM_2024/MM_2024/MicromouseCoding/MicroMouseProgramming/USB_DEVICE/App/instrumented
+-IC:/Users/emanu/Documents/MM_2024/MM_2024/MicromouseCoding/MicroMouseProgramming/USB_DEVICE/Target/instrumented
 -I../../Core/Inc
 -I../../USB_DEVICE/App
 -I../../USB_DEVICE/Target

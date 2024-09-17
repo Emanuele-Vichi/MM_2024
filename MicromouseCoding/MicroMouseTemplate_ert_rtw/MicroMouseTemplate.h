@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 3.11
- * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Tue Sep 17 12:01:14 2024
+ * Model version                  : 4.8
+ * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
+ * C/C++ source code generated on : Tue Sep 17 16:50:26 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -46,7 +46,6 @@
 /* Block signals for system '<S51>/MATLAB System1' */
 typedef struct {
   real_T MATLABSystem1[25];            /* '<S51>/MATLAB System1' */
-  real_T rtu_0[25];
 } B_MATLABSystem1_MicroMouseTem_T;
 
 /* Block states (default storage) for system '<S51>/MATLAB System1' */
@@ -58,7 +57,6 @@ typedef struct {
 /* Block signals for system '<S51>/MATLAB System3' */
 typedef struct {
   real_T MATLABSystem3[10];            /* '<S51>/MATLAB System3' */
-  real_T rtu_0[10];
 } B_MATLABSystem3_MicroMouseTem_T;
 
 /* Block states (default storage) for system '<S51>/MATLAB System3' */
@@ -70,16 +68,11 @@ typedef struct {
 /* Block signals (default storage) */
 typedef struct {
   uint16_T Flip[8];                    /* '<S6>/Flip' */
-  uint16_T CastToDouble[8];            /* '<S53>/Cast To Double' */
-  GPIO_TypeDef * portNameLoc;
-  real_T maxV;
-  real_T maxV_m;
-  real_T minV;
   int16_T leftWheel;                   /* '<S37>/leftWheel' */
   int16_T leftWheel_d;                 /* '<S36>/leftWheel' */
   int16_T leftWheel_dh;                /* '<S35>/leftWheel' */
   int16_T leftWheel_dh2;               /* '<S34>/leftWheel' */
-  int16_T leftWheel_b;                 /* '<Root>/HelloMicroMouse!' */
+  int16_T leftWheel_c;                 /* '<Root>/HelloMicroMouse!' */
   int16_T rightWheel;                  /* '<Root>/HelloMicroMouse!' */
   boolean_T LED0;                      /* '<Root>/HelloMicroMouse!' */
   boolean_T LED_DOWN_L;                /* '<Root>/HelloMicroMouse!' */
@@ -103,8 +96,6 @@ typedef struct {
   stm32cube_blocks_AnalogInput__T obj; /* '<S50>/Analog to Digital Converter' */
   stm32cube_blocks_PWMOutput_Mi_T obj_g;/* '<S46>/PWM Output' */
   stm32cube_blocks_PWMOutput_Mi_T obj_n;/* '<S44>/PWM Output' */
-  real_T TH_R;                         /* '<Root>/HelloMicroMouse!' */
-  real_T TH_L;                         /* '<Root>/HelloMicroMouse!' */
   struct {
     uint_T is_c2_MicroMouseTemplate:2; /* '<Root>/HelloMicroMouse!' */
     uint_T is_ButtonPressed:2;         /* '<Root>/HelloMicroMouse!' */
