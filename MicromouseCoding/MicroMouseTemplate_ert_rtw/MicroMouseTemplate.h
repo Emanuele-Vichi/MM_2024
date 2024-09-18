@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 4.10
+ * Model version                  : 4.14
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Wed Sep 18 21:08:33 2024
+ * C/C++ source code generated on : Thu Sep 19 00:54:22 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -110,12 +110,13 @@ typedef struct {
     uint_T is_EndCalibration:2;        /* '<Root>/HelloMicroMouse!' */
     uint_T is_VeerLeft:2;              /* '<Root>/HelloMicroMouse!' */
     uint_T is_VeerRight:2;             /* '<Root>/HelloMicroMouse!' */
+    uint_T is_Stop:2;                  /* '<Root>/HelloMicroMouse!' */
     uint_T is_active_c2_MicroMouseTemplate:1;/* '<Root>/HelloMicroMouse!' */
   } bitsForTID0;
 
+  uint16_T temporalCounter_i1;         /* '<Root>/HelloMicroMouse!' */
   int8_T If1_ActiveSubsystem;          /* '<S5>/If1' */
   int8_T If_ActiveSubsystem;           /* '<S5>/If' */
-  uint8_T temporalCounter_i1;          /* '<Root>/HelloMicroMouse!' */
   uint8_T temporalCounter_i2;          /* '<Root>/HelloMicroMouse!' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem6;/* '<S54>/MATLAB System1' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem5;/* '<S54>/MATLAB System1' */

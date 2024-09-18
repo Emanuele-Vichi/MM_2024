@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   9 \
+    NumChartData   10 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -60,6 +60,13 @@
       Description  "StateActiveChild"\
       SFName       ""\
       Path         "LineFollowing"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Stop"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "LineFollowing.Stop"\
       SrcLocation  ""\
     }\
     ChartData {\
