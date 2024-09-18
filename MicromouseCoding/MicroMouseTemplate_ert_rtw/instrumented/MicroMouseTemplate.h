@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 4.9
+ * Model version                  : 4.10
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Tue Sep 17 19:21:33 2024
+ * C/C++ source code generated on : Wed Sep 18 21:08:33 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -77,6 +77,12 @@ typedef struct {
   boolean_T LED0;                      /* '<Root>/HelloMicroMouse!' */
   boolean_T LED_DOWN_L;                /* '<Root>/HelloMicroMouse!' */
   boolean_T LED_DOWN_R;                /* '<Root>/HelloMicroMouse!' */
+  boolean_T LED_FWD_L;                 /* '<Root>/HelloMicroMouse!' */
+  boolean_T LED_FWD_R;                 /* '<Root>/HelloMicroMouse!' */
+  boolean_T LED_L;                     /* '<Root>/HelloMicroMouse!' */
+  boolean_T LED_R;                     /* '<Root>/HelloMicroMouse!' */
+  boolean_T LED1;                      /* '<Root>/HelloMicroMouse!' */
+  boolean_T LED2;                      /* '<Root>/HelloMicroMouse!' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem6;/* '<S54>/MATLAB System1' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem5;/* '<S54>/MATLAB System1' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem4_c;/* '<S54>/MATLAB System1' */
@@ -98,13 +104,19 @@ typedef struct {
   stm32cube_blocks_PWMOutput_Mi_T obj_n;/* '<S47>/PWM Output' */
   real_T UnitDelay_DSTATE;             /* '<S34>/Unit Delay' */
   struct {
-    uint_T is_c2_MicroMouseTemplate:2; /* '<Root>/HelloMicroMouse!' */
-    uint_T is_ButtonPressed:2;         /* '<Root>/HelloMicroMouse!' */
+    uint_T is_c2_MicroMouseTemplate:3; /* '<Root>/HelloMicroMouse!' */
+    uint_T is_Calibration:3;           /* '<Root>/HelloMicroMouse!' */
+    uint_T is_LineFollowing:3;         /* '<Root>/HelloMicroMouse!' */
+    uint_T is_EndCalibration:2;        /* '<Root>/HelloMicroMouse!' */
+    uint_T is_VeerLeft:2;              /* '<Root>/HelloMicroMouse!' */
+    uint_T is_VeerRight:2;             /* '<Root>/HelloMicroMouse!' */
     uint_T is_active_c2_MicroMouseTemplate:1;/* '<Root>/HelloMicroMouse!' */
   } bitsForTID0;
 
   int8_T If1_ActiveSubsystem;          /* '<S5>/If1' */
   int8_T If_ActiveSubsystem;           /* '<S5>/If' */
+  uint8_T temporalCounter_i1;          /* '<Root>/HelloMicroMouse!' */
+  uint8_T temporalCounter_i2;          /* '<Root>/HelloMicroMouse!' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem6;/* '<S54>/MATLAB System1' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem5;/* '<S54>/MATLAB System1' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem4_c;/* '<S54>/MATLAB System1' */
