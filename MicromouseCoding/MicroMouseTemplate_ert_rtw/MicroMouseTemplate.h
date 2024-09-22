@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 4.14
+ * Model version                  : 4.22
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Thu Sep 19 00:54:22 2024
+ * C/C++ source code generated on : Thu Sep 19 15:37:54 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -38,71 +38,88 @@
 #define rtmSetErrorStatus(rtm, val)    ((rtm)->errorStatus = (val))
 #endif
 
+#ifndef rtmStepTask
+#define rtmStepTask(rtm, idx)          ((rtm)->Timing.TaskCounters.TID[(idx)] == 0)
+#endif
+
+#ifndef rtmTaskCounter
+#define rtmTaskCounter(rtm, idx)       ((rtm)->Timing.TaskCounters.TID[(idx)])
+#endif
+
 /* user code (top of header file) */
 #include "MicroMouseProgramming\Core\Inc\IMU.h"
 #include "MicroMouseProgramming\Core\Inc\CustomWhile.h"
 #include "MicroMouseProgramming\Core\Inc\Motors.h"
 
-/* Block signals for system '<S54>/MATLAB System1' */
+/* Block signals for system '<S60>/MATLAB System1' */
 typedef struct {
-  real_T MATLABSystem1[25];            /* '<S54>/MATLAB System1' */
+  real_T MATLABSystem1[25];            /* '<S60>/MATLAB System1' */
 } B_MATLABSystem1_MicroMouseTem_T;
 
-/* Block states (default storage) for system '<S54>/MATLAB System1' */
+/* Block states (default storage) for system '<S60>/MATLAB System1' */
 typedef struct {
-  CircularBuffer_MicroMouseTemp_T obj; /* '<S54>/MATLAB System1' */
-  boolean_T objisempty;                /* '<S54>/MATLAB System1' */
+  CircularBuffer_MicroMouseTemp_T obj; /* '<S60>/MATLAB System1' */
+  boolean_T objisempty;                /* '<S60>/MATLAB System1' */
 } DW_MATLABSystem1_MicroMouseTe_T;
 
-/* Block signals for system '<S54>/MATLAB System3' */
+/* Block signals for system '<S60>/MATLAB System3' */
 typedef struct {
-  real_T MATLABSystem3[10];            /* '<S54>/MATLAB System3' */
+  real_T MATLABSystem3[10];            /* '<S60>/MATLAB System3' */
 } B_MATLABSystem3_MicroMouseTem_T;
 
-/* Block states (default storage) for system '<S54>/MATLAB System3' */
+/* Block states (default storage) for system '<S60>/MATLAB System3' */
 typedef struct {
-  CircularBuffer_MicroMouseTe_p_T obj; /* '<S54>/MATLAB System3' */
-  boolean_T objisempty;                /* '<S54>/MATLAB System3' */
+  CircularBuffer_MicroMouseTe_p_T obj; /* '<S60>/MATLAB System3' */
+  boolean_T objisempty;                /* '<S60>/MATLAB System3' */
 } DW_MATLABSystem3_MicroMouseTe_T;
 
 /* Block signals (default storage) */
 typedef struct {
+  real_T In1;                          /* '<S42>/In1' */
+  real_T In1_p;                        /* '<S35>/In1' */
+  real_T In1_p1;                       /* '<S39>/In1' */
+  real_T In1_p1q;                      /* '<S38>/In1' */
+  real_T In1_p1qj;                     /* '<S41>/In1' */
+  real_T In1_p1qjd;                    /* '<S36>/In1' */
+  real_T LED_DOWN_R;                   /* '<S40>/LED_DOWN_R' */
+  real_T LED_DOWN_L;                   /* '<S37>/LED_DOWN_L' */
+  real_T LED_DOWN_L_g;                 /* '<Root>/HelloMicroMouse!' */
+  real_T LED_DOWN_R_k;                 /* '<Root>/HelloMicroMouse!' */
+  real_T LED_FWD_L;                    /* '<Root>/HelloMicroMouse!' */
+  real_T LED_FWD_R;                    /* '<Root>/HelloMicroMouse!' */
+  real_T LED_L;                        /* '<Root>/HelloMicroMouse!' */
+  real_T LED_R;                        /* '<Root>/HelloMicroMouse!' */
+  real_T LED_CROSS_L;                  /* '<Root>/HelloMicroMouse!' */
+  real_T LED_CROSS_R;                  /* '<Root>/HelloMicroMouse!' */
   uint16_T Flip[8];                    /* '<S6>/Flip' */
-  int16_T leftWheel;                   /* '<S40>/leftWheel' */
-  int16_T leftWheel_d;                 /* '<S39>/leftWheel' */
-  int16_T leftWheel_dh;                /* '<S38>/leftWheel' */
-  int16_T leftWheel_dh2;               /* '<S37>/leftWheel' */
+  int16_T leftWheel;                   /* '<S46>/leftWheel' */
+  int16_T leftWheel_d;                 /* '<S45>/leftWheel' */
+  int16_T leftWheel_dh;                /* '<S44>/leftWheel' */
+  int16_T leftWheel_dh2;               /* '<S43>/leftWheel' */
   int16_T leftWheel_c;                 /* '<Root>/HelloMicroMouse!' */
   int16_T rightWheel;                  /* '<Root>/HelloMicroMouse!' */
   boolean_T LED0;                      /* '<Root>/HelloMicroMouse!' */
-  boolean_T LED_DOWN_L;                /* '<Root>/HelloMicroMouse!' */
-  boolean_T LED_DOWN_R;                /* '<Root>/HelloMicroMouse!' */
-  boolean_T LED_FWD_L;                 /* '<Root>/HelloMicroMouse!' */
-  boolean_T LED_FWD_R;                 /* '<Root>/HelloMicroMouse!' */
-  boolean_T LED_L;                     /* '<Root>/HelloMicroMouse!' */
-  boolean_T LED_R;                     /* '<Root>/HelloMicroMouse!' */
   boolean_T LED1;                      /* '<Root>/HelloMicroMouse!' */
   boolean_T LED2;                      /* '<Root>/HelloMicroMouse!' */
-  B_MATLABSystem1_MicroMouseTem_T MATLABSystem6;/* '<S54>/MATLAB System1' */
-  B_MATLABSystem1_MicroMouseTem_T MATLABSystem5;/* '<S54>/MATLAB System1' */
-  B_MATLABSystem1_MicroMouseTem_T MATLABSystem4_c;/* '<S54>/MATLAB System1' */
-  B_MATLABSystem1_MicroMouseTem_T MATLABSystem3_c;/* '<S54>/MATLAB System1' */
-  B_MATLABSystem1_MicroMouseTem_T MATLABSystem2_ci;/* '<S54>/MATLAB System1' */
-  B_MATLABSystem1_MicroMouseTem_T MATLABSystem1_ci;/* '<S54>/MATLAB System1' */
-  B_MATLABSystem1_MicroMouseTem_T MATLABSystem2_c;/* '<S54>/MATLAB System1' */
-  B_MATLABSystem1_MicroMouseTem_T MATLABSystem1_c;/* '<S54>/MATLAB System1' */
-  B_MATLABSystem3_MicroMouseTem_T MATLABSystem4;/* '<S54>/MATLAB System3' */
-  B_MATLABSystem3_MicroMouseTem_T MATLABSystem3;/* '<S54>/MATLAB System3' */
-  B_MATLABSystem1_MicroMouseTem_T MATLABSystem2;/* '<S54>/MATLAB System1' */
-  B_MATLABSystem1_MicroMouseTem_T MATLABSystem1;/* '<S54>/MATLAB System1' */
+  B_MATLABSystem1_MicroMouseTem_T MATLABSystem6;/* '<S60>/MATLAB System1' */
+  B_MATLABSystem1_MicroMouseTem_T MATLABSystem5;/* '<S60>/MATLAB System1' */
+  B_MATLABSystem1_MicroMouseTem_T MATLABSystem4_c;/* '<S60>/MATLAB System1' */
+  B_MATLABSystem1_MicroMouseTem_T MATLABSystem3_c;/* '<S60>/MATLAB System1' */
+  B_MATLABSystem1_MicroMouseTem_T MATLABSystem2_ci;/* '<S60>/MATLAB System1' */
+  B_MATLABSystem1_MicroMouseTem_T MATLABSystem1_ci;/* '<S60>/MATLAB System1' */
+  B_MATLABSystem1_MicroMouseTem_T MATLABSystem2_c;/* '<S60>/MATLAB System1' */
+  B_MATLABSystem1_MicroMouseTem_T MATLABSystem1_c;/* '<S60>/MATLAB System1' */
+  B_MATLABSystem3_MicroMouseTem_T MATLABSystem4;/* '<S60>/MATLAB System3' */
+  B_MATLABSystem3_MicroMouseTem_T MATLABSystem3;/* '<S60>/MATLAB System3' */
+  B_MATLABSystem1_MicroMouseTem_T MATLABSystem2;/* '<S60>/MATLAB System1' */
+  B_MATLABSystem1_MicroMouseTem_T MATLABSystem1;/* '<S60>/MATLAB System1' */
 } B_MicroMouseTemplate_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  stm32cube_blocks_AnalogInput__T obj; /* '<S53>/Analog to Digital Converter' */
-  stm32cube_blocks_PWMOutput_Mi_T obj_g;/* '<S49>/PWM Output' */
-  stm32cube_blocks_PWMOutput_Mi_T obj_n;/* '<S47>/PWM Output' */
-  real_T UnitDelay_DSTATE;             /* '<S34>/Unit Delay' */
+  stm32cube_blocks_AnalogInput__T obj; /* '<S59>/Analog to Digital Converter' */
+  stm32cube_blocks_PWMOutput_Mi_T obj_g;/* '<S55>/PWM Output' */
+  stm32cube_blocks_PWMOutput_Mi_T obj_n;/* '<S53>/PWM Output' */
   struct {
     uint_T is_c2_MicroMouseTemplate:3; /* '<Root>/HelloMicroMouse!' */
     uint_T is_Calibration:3;           /* '<Root>/HelloMicroMouse!' */
@@ -112,47 +129,65 @@ typedef struct {
     uint_T is_VeerRight:2;             /* '<Root>/HelloMicroMouse!' */
     uint_T is_Stop:2;                  /* '<Root>/HelloMicroMouse!' */
     uint_T is_active_c2_MicroMouseTemplate:1;/* '<Root>/HelloMicroMouse!' */
-  } bitsForTID0;
+  } bitsForTID1;
 
   uint16_T temporalCounter_i1;         /* '<Root>/HelloMicroMouse!' */
   int8_T If1_ActiveSubsystem;          /* '<S5>/If1' */
   int8_T If_ActiveSubsystem;           /* '<S5>/If' */
   uint8_T temporalCounter_i2;          /* '<Root>/HelloMicroMouse!' */
-  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem6;/* '<S54>/MATLAB System1' */
-  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem5;/* '<S54>/MATLAB System1' */
-  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem4_c;/* '<S54>/MATLAB System1' */
-  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem3_c;/* '<S54>/MATLAB System1' */
-  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem2_ci;/* '<S54>/MATLAB System1' */
-  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem1_ci;/* '<S54>/MATLAB System1' */
-  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem2_c;/* '<S54>/MATLAB System1' */
-  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem1_c;/* '<S54>/MATLAB System1' */
-  DW_MATLABSystem3_MicroMouseTe_T MATLABSystem4;/* '<S54>/MATLAB System3' */
-  DW_MATLABSystem3_MicroMouseTe_T MATLABSystem3;/* '<S54>/MATLAB System3' */
-  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem2;/* '<S54>/MATLAB System1' */
-  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem1;/* '<S54>/MATLAB System1' */
+  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem6;/* '<S60>/MATLAB System1' */
+  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem5;/* '<S60>/MATLAB System1' */
+  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem4_c;/* '<S60>/MATLAB System1' */
+  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem3_c;/* '<S60>/MATLAB System1' */
+  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem2_ci;/* '<S60>/MATLAB System1' */
+  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem1_ci;/* '<S60>/MATLAB System1' */
+  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem2_c;/* '<S60>/MATLAB System1' */
+  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem1_c;/* '<S60>/MATLAB System1' */
+  DW_MATLABSystem3_MicroMouseTe_T MATLABSystem4;/* '<S60>/MATLAB System3' */
+  DW_MATLABSystem3_MicroMouseTe_T MATLABSystem3;/* '<S60>/MATLAB System3' */
+  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem2;/* '<S60>/MATLAB System1' */
+  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem1;/* '<S60>/MATLAB System1' */
 } DW_MicroMouseTemplate_T;
 
-/* Parameters for system: '<S54>/MATLAB System1' */
+/* Parameters for system: '<S60>/MATLAB System1' */
 struct P_MATLABSystem1_MicroMouseTem_T_ {
   real_T MATLABSystem1_InitialCondition;/* Expression: 0
-                                         * Referenced by: '<S54>/MATLAB System1'
+                                         * Referenced by: '<S60>/MATLAB System1'
                                          */
 };
 
-/* Parameters for system: '<S54>/MATLAB System3' */
+/* Parameters for system: '<S60>/MATLAB System3' */
 struct P_MATLABSystem3_MicroMouseTem_T_ {
   real_T MATLABSystem3_InitialCondition;/* Expression: 0
-                                         * Referenced by: '<S54>/MATLAB System3'
+                                         * Referenced by: '<S60>/MATLAB System3'
                                          */
 };
 
 /* Parameters (default storage) */
 struct P_MicroMouseTemplate_T_ {
-  real_T Out1_Y0;                      /* Expression: 0
+  real_T Out1_Y0;                      /* Computed Parameter: Out1_Y0
+                                        * Referenced by: '<S37>/Out1'
+                                        */
+  real_T Out1_Y0_g;                    /* Computed Parameter: Out1_Y0_g
+                                        * Referenced by: '<S40>/Out1'
+                                        */
+  real_T Out1_Y0_e;                    /* Computed Parameter: Out1_Y0_e
+                                        * Referenced by: '<S36>/Out1'
+                                        */
+  real_T Out1_Y0_d;                    /* Computed Parameter: Out1_Y0_d
+                                        * Referenced by: '<S41>/Out1'
+                                        */
+  real_T Out1_Y0_j;                    /* Computed Parameter: Out1_Y0_j
+                                        * Referenced by: '<S38>/Out1'
+                                        */
+  real_T Out1_Y0_f;                    /* Computed Parameter: Out1_Y0_f
+                                        * Referenced by: '<S39>/Out1'
+                                        */
+  real_T Out1_Y0_a;                    /* Computed Parameter: Out1_Y0_a
                                         * Referenced by: '<S35>/Out1'
                                         */
-  real_T Out1_Y0_o;                    /* Expression: 0
-                                        * Referenced by: '<S36>/Out1'
+  real_T Out1_Y0_b;                    /* Computed Parameter: Out1_Y0_b
+                                        * Referenced by: '<S42>/Out1'
                                         */
   real_T Constant_Value;               /* Expression: 1
                                         * Referenced by: '<S5>/Constant'
@@ -160,11 +195,8 @@ struct P_MicroMouseTemplate_T_ {
   real_T Constant_Value_i;             /* Expression: 1
                                         * Referenced by: '<S8>/Constant'
                                         */
-  real_T Constant_Value_o;             /* Expression: 1
-                                        * Referenced by: '<S34>/Constant'
-                                        */
-  real_T UnitDelay_InitialCondition;   /* Expression: 0
-                                        * Referenced by: '<S34>/Unit Delay'
+  real_T Constant_Value_j;             /* Expression: 1
+                                        * Referenced by: '<S4>/Constant'
                                         */
   int32_T DataStoreMemory2_InitialValue;
                             /* Computed Parameter: DataStoreMemory2_InitialValue
@@ -183,26 +215,26 @@ struct P_MicroMouseTemplate_T_ {
                              * Referenced by: '<S7>/Data Store Memory1'
                              */
   int16_T Out1_Y0_n;                   /* Computed Parameter: Out1_Y0_n
-                                        * Referenced by: '<S37>/Out1'
+                                        * Referenced by: '<S43>/Out1'
                                         */
-  int16_T Out1_Y0_oh;                  /* Computed Parameter: Out1_Y0_oh
-                                        * Referenced by: '<S38>/Out1'
+  int16_T Out1_Y0_o;                   /* Computed Parameter: Out1_Y0_o
+                                        * Referenced by: '<S44>/Out1'
                                         */
-  int16_T Out1_Y0_a;                   /* Computed Parameter: Out1_Y0_a
-                                        * Referenced by: '<S39>/Out1'
+  int16_T Out1_Y0_ai;                  /* Computed Parameter: Out1_Y0_ai
+                                        * Referenced by: '<S45>/Out1'
                                         */
   int16_T Out1_Y0_i;                   /* Computed Parameter: Out1_Y0_i
-                                        * Referenced by: '<S40>/Out1'
+                                        * Referenced by: '<S46>/Out1'
                                         */
   uint16_T DataStoreMemory1_InitialValue_j;
                           /* Computed Parameter: DataStoreMemory1_InitialValue_j
                            * Referenced by: '<S1>/Data Store Memory1'
                            */
   uint16_T Constant_Value_b;           /* Computed Parameter: Constant_Value_b
-                                        * Referenced by: '<S51>/Constant'
+                                        * Referenced by: '<S57>/Constant'
                                         */
   uint16_T Constant1_Value;            /* Computed Parameter: Constant1_Value
-                                        * Referenced by: '<S51>/Constant1'
+                                        * Referenced by: '<S57>/Constant1'
                                         */
   uint16_T DataStoreMemory_InitialValue_p;
                            /* Computed Parameter: DataStoreMemory_InitialValue_p
@@ -220,18 +252,18 @@ struct P_MicroMouseTemplate_T_ {
                           /* Computed Parameter: DataStoreMemory_InitialValue_p4
                            * Referenced by: '<S1>/Data Store Memory'
                            */
-  P_MATLABSystem1_MicroMouseTem_T MATLABSystem6;/* '<S54>/MATLAB System1' */
-  P_MATLABSystem1_MicroMouseTem_T MATLABSystem5;/* '<S54>/MATLAB System1' */
-  P_MATLABSystem1_MicroMouseTem_T MATLABSystem4_c;/* '<S54>/MATLAB System1' */
-  P_MATLABSystem1_MicroMouseTem_T MATLABSystem3_c;/* '<S54>/MATLAB System1' */
-  P_MATLABSystem1_MicroMouseTem_T MATLABSystem2_ci;/* '<S54>/MATLAB System1' */
-  P_MATLABSystem1_MicroMouseTem_T MATLABSystem1_ci;/* '<S54>/MATLAB System1' */
-  P_MATLABSystem1_MicroMouseTem_T MATLABSystem2_c;/* '<S54>/MATLAB System1' */
-  P_MATLABSystem1_MicroMouseTem_T MATLABSystem1_c;/* '<S54>/MATLAB System1' */
-  P_MATLABSystem3_MicroMouseTem_T MATLABSystem4;/* '<S54>/MATLAB System3' */
-  P_MATLABSystem3_MicroMouseTem_T MATLABSystem3;/* '<S54>/MATLAB System3' */
-  P_MATLABSystem1_MicroMouseTem_T MATLABSystem2;/* '<S54>/MATLAB System1' */
-  P_MATLABSystem1_MicroMouseTem_T MATLABSystem1;/* '<S54>/MATLAB System1' */
+  P_MATLABSystem1_MicroMouseTem_T MATLABSystem6;/* '<S60>/MATLAB System1' */
+  P_MATLABSystem1_MicroMouseTem_T MATLABSystem5;/* '<S60>/MATLAB System1' */
+  P_MATLABSystem1_MicroMouseTem_T MATLABSystem4_c;/* '<S60>/MATLAB System1' */
+  P_MATLABSystem1_MicroMouseTem_T MATLABSystem3_c;/* '<S60>/MATLAB System1' */
+  P_MATLABSystem1_MicroMouseTem_T MATLABSystem2_ci;/* '<S60>/MATLAB System1' */
+  P_MATLABSystem1_MicroMouseTem_T MATLABSystem1_ci;/* '<S60>/MATLAB System1' */
+  P_MATLABSystem1_MicroMouseTem_T MATLABSystem2_c;/* '<S60>/MATLAB System1' */
+  P_MATLABSystem1_MicroMouseTem_T MATLABSystem1_c;/* '<S60>/MATLAB System1' */
+  P_MATLABSystem3_MicroMouseTem_T MATLABSystem4;/* '<S60>/MATLAB System3' */
+  P_MATLABSystem3_MicroMouseTem_T MATLABSystem3;/* '<S60>/MATLAB System3' */
+  P_MATLABSystem1_MicroMouseTem_T MATLABSystem2;/* '<S60>/MATLAB System1' */
+  P_MATLABSystem1_MicroMouseTem_T MATLABSystem1;/* '<S60>/MATLAB System1' */
 };
 
 /* Code_Instrumentation_Declarations_Placeholder */
@@ -239,6 +271,17 @@ struct P_MicroMouseTemplate_T_ {
 /* Real-time Model Data Structure */
 struct tag_RTM_MicroMouseTemplate_T {
   const char_T * volatile errorStatus;
+
+  /*
+   * Timing:
+   * The following substructure contains information regarding
+   * the timing information for the model.
+   */
+  struct {
+    struct {
+      uint8_T TID[2];
+    } TaskCounters;
+  } Timing;
 };
 
 /* Block parameters (default storage) */
@@ -268,9 +311,13 @@ extern uint16_T ADC_H[9];              /* '<S6>/Data Store Memory1' */
 extern uint16_T ADC_L[9];              /* '<S6>/Data Store Memory2' */
 extern boolean_T Detections[8];        /* '<S1>/Data Store Memory' */
 
+/* External function called from main */
+extern void MicroMouseTemplate_SetEventsForThisBaseStep(boolean_T *eventFlags);
+
 /* Model entry point functions */
 extern void MicroMouseTemplate_initialize(void);
-extern void MicroMouseTemplate_step(void);
+extern void MicroMouseTemplate_step0(void);/* Sample time: [0.05s, 0.0s] */
+extern void MicroMouseTemplate_step1(void);/* Sample time: [0.1s, 0.0s] */
 extern void MicroMouseTemplate_terminate(void);
 
 /* Real-time Model object */
@@ -281,10 +328,13 @@ extern volatile boolean_T runModel;
 /*-
  * These blocks were eliminated from the model due to optimizations:
  *
- * Block '<S51>/Cast1' : Eliminate redundant data type conversion
- * Block '<S51>/Cast3' : Eliminate redundant data type conversion
- * Block '<S56>/Rate Transition' : Eliminated since input and output rates are identical
- * Block '<S56>/Rate Transition1' : Eliminated since input and output rates are identical
+ * Block '<S34>/Constant' : Unused code path elimination
+ * Block '<S34>/Sum' : Unused code path elimination
+ * Block '<S34>/Unit Delay' : Unused code path elimination
+ * Block '<S57>/Cast1' : Eliminate redundant data type conversion
+ * Block '<S57>/Cast3' : Eliminate redundant data type conversion
+ * Block '<S62>/Rate Transition' : Eliminated since input and output rates are identical
+ * Block '<S62>/Rate Transition1' : Eliminated since input and output rates are identical
  */
 
 /*-
@@ -338,44 +388,50 @@ extern volatile boolean_T runModel;
  * '<S34>'  : 'MicroMouseTemplate/IR LED Pattern/Clock'
  * '<S35>'  : 'MicroMouseTemplate/IR LED Pattern/If Action Subsystem'
  * '<S36>'  : 'MicroMouseTemplate/IR LED Pattern/If Action Subsystem1'
- * '<S37>'  : 'MicroMouseTemplate/Motors/If Action Subsystem'
- * '<S38>'  : 'MicroMouseTemplate/Motors/If Action Subsystem1'
- * '<S39>'  : 'MicroMouseTemplate/Motors/If Action Subsystem2'
- * '<S40>'  : 'MicroMouseTemplate/Motors/If Action Subsystem3'
- * '<S41>'  : 'MicroMouseTemplate/Motors/MOTOR_EN'
- * '<S42>'  : 'MicroMouseTemplate/Motors/PWM Output'
- * '<S43>'  : 'MicroMouseTemplate/Motors/PWM Output1'
- * '<S44>'  : 'MicroMouseTemplate/Motors/MOTOR_EN/ECSoC'
- * '<S45>'  : 'MicroMouseTemplate/Motors/MOTOR_EN/ECSoC/ECSimCodegen'
- * '<S46>'  : 'MicroMouseTemplate/Motors/PWM Output/ECSoC'
- * '<S47>'  : 'MicroMouseTemplate/Motors/PWM Output/ECSoC/ECSimCodegen'
- * '<S48>'  : 'MicroMouseTemplate/Motors/PWM Output1/ECSoC'
- * '<S49>'  : 'MicroMouseTemplate/Motors/PWM Output1/ECSoC/ECSimCodegen'
- * '<S50>'  : 'MicroMouseTemplate/Subsystem/ADC2 IN10  IN1'
- * '<S51>'  : 'MicroMouseTemplate/Subsystem/get Highs and Lows'
- * '<S52>'  : 'MicroMouseTemplate/Subsystem/ADC2 IN10  IN1/ECSoC'
- * '<S53>'  : 'MicroMouseTemplate/Subsystem/ADC2 IN10  IN1/ECSoC/ECSimCodegen'
- * '<S54>'  : 'MicroMouseTemplate/Subsystem/get Highs and Lows/Subsystem'
- * '<S55>'  : 'MicroMouseTemplate/Subsystem/get Highs and Lows/Subsystem1'
- * '<S56>'  : 'MicroMouseTemplate/Subsystem/get Highs and Lows/Subsystem2'
- * '<S57>'  : 'MicroMouseTemplate/Subsystem2/CTRL_LEDs'
- * '<S58>'  : 'MicroMouseTemplate/Subsystem2/LED_0'
- * '<S59>'  : 'MicroMouseTemplate/Subsystem2/LED_1'
- * '<S60>'  : 'MicroMouseTemplate/Subsystem2/LED_2'
- * '<S61>'  : 'MicroMouseTemplate/Subsystem2/CTRL_LEDs/ECSoC'
- * '<S62>'  : 'MicroMouseTemplate/Subsystem2/CTRL_LEDs/ECSoC/ECSimCodegen'
- * '<S63>'  : 'MicroMouseTemplate/Subsystem2/LED_0/ECSoC'
- * '<S64>'  : 'MicroMouseTemplate/Subsystem2/LED_0/ECSoC/ECSimCodegen'
- * '<S65>'  : 'MicroMouseTemplate/Subsystem2/LED_1/ECSoC'
- * '<S66>'  : 'MicroMouseTemplate/Subsystem2/LED_1/ECSoC/ECSimCodegen'
- * '<S67>'  : 'MicroMouseTemplate/Subsystem2/LED_2/ECSoC'
- * '<S68>'  : 'MicroMouseTemplate/Subsystem2/LED_2/ECSoC/ECSimCodegen'
- * '<S69>'  : 'MicroMouseTemplate/Subsystem3/SW_1'
- * '<S70>'  : 'MicroMouseTemplate/Subsystem3/SW_2'
- * '<S71>'  : 'MicroMouseTemplate/Subsystem3/SW_1/ECSoC'
- * '<S72>'  : 'MicroMouseTemplate/Subsystem3/SW_1/ECSoC/ECSimCodegen'
- * '<S73>'  : 'MicroMouseTemplate/Subsystem3/SW_2/ECSoC'
- * '<S74>'  : 'MicroMouseTemplate/Subsystem3/SW_2/ECSoC/ECSimCodegen'
+ * '<S37>'  : 'MicroMouseTemplate/IR LED Pattern/If Action Subsystem2'
+ * '<S38>'  : 'MicroMouseTemplate/IR LED Pattern/If Action Subsystem3'
+ * '<S39>'  : 'MicroMouseTemplate/IR LED Pattern/If Action Subsystem4'
+ * '<S40>'  : 'MicroMouseTemplate/IR LED Pattern/If Action Subsystem5'
+ * '<S41>'  : 'MicroMouseTemplate/IR LED Pattern/If Action Subsystem6'
+ * '<S42>'  : 'MicroMouseTemplate/IR LED Pattern/If Action Subsystem7'
+ * '<S43>'  : 'MicroMouseTemplate/Motors/If Action Subsystem'
+ * '<S44>'  : 'MicroMouseTemplate/Motors/If Action Subsystem1'
+ * '<S45>'  : 'MicroMouseTemplate/Motors/If Action Subsystem2'
+ * '<S46>'  : 'MicroMouseTemplate/Motors/If Action Subsystem3'
+ * '<S47>'  : 'MicroMouseTemplate/Motors/MOTOR_EN'
+ * '<S48>'  : 'MicroMouseTemplate/Motors/PWM Output'
+ * '<S49>'  : 'MicroMouseTemplate/Motors/PWM Output1'
+ * '<S50>'  : 'MicroMouseTemplate/Motors/MOTOR_EN/ECSoC'
+ * '<S51>'  : 'MicroMouseTemplate/Motors/MOTOR_EN/ECSoC/ECSimCodegen'
+ * '<S52>'  : 'MicroMouseTemplate/Motors/PWM Output/ECSoC'
+ * '<S53>'  : 'MicroMouseTemplate/Motors/PWM Output/ECSoC/ECSimCodegen'
+ * '<S54>'  : 'MicroMouseTemplate/Motors/PWM Output1/ECSoC'
+ * '<S55>'  : 'MicroMouseTemplate/Motors/PWM Output1/ECSoC/ECSimCodegen'
+ * '<S56>'  : 'MicroMouseTemplate/Subsystem/ADC2 IN10  IN1'
+ * '<S57>'  : 'MicroMouseTemplate/Subsystem/get Highs and Lows'
+ * '<S58>'  : 'MicroMouseTemplate/Subsystem/ADC2 IN10  IN1/ECSoC'
+ * '<S59>'  : 'MicroMouseTemplate/Subsystem/ADC2 IN10  IN1/ECSoC/ECSimCodegen'
+ * '<S60>'  : 'MicroMouseTemplate/Subsystem/get Highs and Lows/Subsystem'
+ * '<S61>'  : 'MicroMouseTemplate/Subsystem/get Highs and Lows/Subsystem1'
+ * '<S62>'  : 'MicroMouseTemplate/Subsystem/get Highs and Lows/Subsystem2'
+ * '<S63>'  : 'MicroMouseTemplate/Subsystem2/CTRL_LEDs'
+ * '<S64>'  : 'MicroMouseTemplate/Subsystem2/LED_0'
+ * '<S65>'  : 'MicroMouseTemplate/Subsystem2/LED_1'
+ * '<S66>'  : 'MicroMouseTemplate/Subsystem2/LED_2'
+ * '<S67>'  : 'MicroMouseTemplate/Subsystem2/CTRL_LEDs/ECSoC'
+ * '<S68>'  : 'MicroMouseTemplate/Subsystem2/CTRL_LEDs/ECSoC/ECSimCodegen'
+ * '<S69>'  : 'MicroMouseTemplate/Subsystem2/LED_0/ECSoC'
+ * '<S70>'  : 'MicroMouseTemplate/Subsystem2/LED_0/ECSoC/ECSimCodegen'
+ * '<S71>'  : 'MicroMouseTemplate/Subsystem2/LED_1/ECSoC'
+ * '<S72>'  : 'MicroMouseTemplate/Subsystem2/LED_1/ECSoC/ECSimCodegen'
+ * '<S73>'  : 'MicroMouseTemplate/Subsystem2/LED_2/ECSoC'
+ * '<S74>'  : 'MicroMouseTemplate/Subsystem2/LED_2/ECSoC/ECSimCodegen'
+ * '<S75>'  : 'MicroMouseTemplate/Subsystem3/SW_1'
+ * '<S76>'  : 'MicroMouseTemplate/Subsystem3/SW_2'
+ * '<S77>'  : 'MicroMouseTemplate/Subsystem3/SW_1/ECSoC'
+ * '<S78>'  : 'MicroMouseTemplate/Subsystem3/SW_1/ECSoC/ECSimCodegen'
+ * '<S79>'  : 'MicroMouseTemplate/Subsystem3/SW_2/ECSoC'
+ * '<S80>'  : 'MicroMouseTemplate/Subsystem3/SW_2/ECSoC/ECSimCodegen'
  */
 #endif                                 /* MicroMouseTemplate_h_ */
 

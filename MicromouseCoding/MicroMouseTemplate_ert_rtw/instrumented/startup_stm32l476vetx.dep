@@ -1,2 +1,2 @@
 startup_stm32l476vetx.o: \
- C:/Users/emanu/Documents/MM_2024/MM_2024/MicromouseCoding/MicroMouseProgramming/STM32CubeIDE/Application/User/Startup/instrumented/startup_stm32l476vetx.s
+ C:/Users/emanu/Documents/MM_2024/MicromouseCoding/MicroMouseProgramming/STM32CubeIDE/Application/User/Startup/instrumented/startup_stm32l476vetx.s
