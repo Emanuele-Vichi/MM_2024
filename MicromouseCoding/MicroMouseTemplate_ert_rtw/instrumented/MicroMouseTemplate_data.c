@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 4.22
+ * Model version                  : 4.27
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Thu Sep 19 15:37:54 2024
+ * C/C++ source code generated on : Wed Oct  2 16:54:31 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -62,17 +62,22 @@ P_MicroMouseTemplate_T MicroMouseTemplate_P = {
   0.0,
 
   /* Expression: 1
+   * Referenced by: '<S34>/Constant'
+   */
+  1.0,
+
+  /* Expression: 0
+   * Referenced by: '<S34>/Unit Delay'
+   */
+  0.0,
+
+  /* Expression: 1
    * Referenced by: '<S5>/Constant'
    */
   1.0,
 
   /* Expression: 1
    * Referenced by: '<S8>/Constant'
-   */
-  1.0,
-
-  /* Expression: 1
-   * Referenced by: '<S4>/Constant'
    */
   1.0,
 
@@ -116,13 +121,28 @@ P_MicroMouseTemplate_T MicroMouseTemplate_P = {
    */
   0,
 
-  /* Computed Parameter: DataStoreMemory1_InitialValue_j
-   * Referenced by: '<S1>/Data Store Memory1'
+  /* Computed Parameter: TmpRTBAtMaxofElementsOutport1_I
+   * Referenced by:
+   */
+  0U,
+
+  /* Computed Parameter: TmpRTBAtMaxofElements7Outport1_
+   * Referenced by:
    */
   0U,
 
   /* Computed Parameter: Constant_Value_b
    * Referenced by: '<S57>/Constant'
+   */
+  0U,
+
+  /* Computed Parameter: TmpRTBAtMaxofElements8Outport1_
+   * Referenced by:
+   */
+  0U,
+
+  /* Computed Parameter: TmpRTBAtMaxofElements15Outport1
+   * Referenced by:
    */
   0U,
 
@@ -143,6 +163,11 @@ P_MicroMouseTemplate_T MicroMouseTemplate_P = {
 
   /* Computed Parameter: DataStoreMemory2_InitialValue_p
    * Referenced by: '<S6>/Data Store Memory2'
+   */
+  0U,
+
+  /* Computed Parameter: DataStoreMemory1_InitialValue_j
+   * Referenced by: '<S1>/Data Store Memory1'
    */
   0U,
 

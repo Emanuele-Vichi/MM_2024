@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 4.22
+ * Model version                  : 4.27
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Thu Sep 19 15:37:54 2024
+ * C/C++ source code generated on : Wed Oct  2 16:54:31 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -73,6 +73,17 @@ typedef struct {
   boolean_T objisempty;                /* '<S60>/MATLAB System3' */
 } DW_MATLABSystem3_MicroMouseTe_T;
 
+/* Block signals for system '<S62>/MATLAB System2' */
+typedef struct {
+  real_T MATLABSystem2[25];            /* '<S62>/MATLAB System2' */
+} B_MATLABSystem2_MicroMouseTem_T;
+
+/* Block states (default storage) for system '<S62>/MATLAB System2' */
+typedef struct {
+  CircularBuffer_MicroMouseTemp_T obj; /* '<S62>/MATLAB System2' */
+  boolean_T objisempty;                /* '<S62>/MATLAB System2' */
+} DW_MATLABSystem2_MicroMouseTe_T;
+
 /* Block signals (default storage) */
 typedef struct {
   real_T In1;                          /* '<S42>/In1' */
@@ -101,11 +112,11 @@ typedef struct {
   boolean_T LED0;                      /* '<Root>/HelloMicroMouse!' */
   boolean_T LED1;                      /* '<Root>/HelloMicroMouse!' */
   boolean_T LED2;                      /* '<Root>/HelloMicroMouse!' */
-  B_MATLABSystem1_MicroMouseTem_T MATLABSystem6;/* '<S60>/MATLAB System1' */
+  B_MATLABSystem2_MicroMouseTem_T MATLABSystem6;/* '<S62>/MATLAB System2' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem5;/* '<S60>/MATLAB System1' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem4_c;/* '<S60>/MATLAB System1' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem3_c;/* '<S60>/MATLAB System1' */
-  B_MATLABSystem1_MicroMouseTem_T MATLABSystem2_ci;/* '<S60>/MATLAB System1' */
+  B_MATLABSystem2_MicroMouseTem_T MATLABSystem2_ci;/* '<S62>/MATLAB System2' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem1_ci;/* '<S60>/MATLAB System1' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem2_c;/* '<S60>/MATLAB System1' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem1_c;/* '<S60>/MATLAB System1' */
@@ -120,26 +131,28 @@ typedef struct {
   stm32cube_blocks_AnalogInput__T obj; /* '<S59>/Analog to Digital Converter' */
   stm32cube_blocks_PWMOutput_Mi_T obj_g;/* '<S55>/PWM Output' */
   stm32cube_blocks_PWMOutput_Mi_T obj_n;/* '<S53>/PWM Output' */
+  real_T UnitDelay_DSTATE;             /* '<S34>/Unit Delay' */
+  real_T RateTransition_Buffer;        /* '<S62>/Rate Transition' */
+  real_T RateTransition1_Buffer;       /* '<S62>/Rate Transition1' */
   struct {
     uint_T is_c2_MicroMouseTemplate:3; /* '<Root>/HelloMicroMouse!' */
-    uint_T is_Calibration:3;           /* '<Root>/HelloMicroMouse!' */
     uint_T is_LineFollowing:3;         /* '<Root>/HelloMicroMouse!' */
-    uint_T is_EndCalibration:2;        /* '<Root>/HelloMicroMouse!' */
-    uint_T is_VeerLeft:2;              /* '<Root>/HelloMicroMouse!' */
-    uint_T is_VeerRight:2;             /* '<Root>/HelloMicroMouse!' */
     uint_T is_Stop:2;                  /* '<Root>/HelloMicroMouse!' */
     uint_T is_active_c2_MicroMouseTemplate:1;/* '<Root>/HelloMicroMouse!' */
-  } bitsForTID1;
+  } bitsForTID0;
 
+  volatile uint16_T TmpRTBAtMaxofElementsOutport1_B;/* synthesized block */
+  volatile uint16_T TmpRTBAtMaxofElements7Outport1_;/* synthesized block */
+  volatile uint16_T TmpRTBAtMaxofElements8Outport1_;/* synthesized block */
+  volatile uint16_T TmpRTBAtMaxofElements15Outport1;/* synthesized block */
   uint16_T temporalCounter_i1;         /* '<Root>/HelloMicroMouse!' */
   int8_T If1_ActiveSubsystem;          /* '<S5>/If1' */
   int8_T If_ActiveSubsystem;           /* '<S5>/If' */
-  uint8_T temporalCounter_i2;          /* '<Root>/HelloMicroMouse!' */
-  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem6;/* '<S60>/MATLAB System1' */
+  DW_MATLABSystem2_MicroMouseTe_T MATLABSystem6;/* '<S62>/MATLAB System2' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem5;/* '<S60>/MATLAB System1' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem4_c;/* '<S60>/MATLAB System1' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem3_c;/* '<S60>/MATLAB System1' */
-  DW_MATLABSystem1_MicroMouseTe_T MATLABSystem2_ci;/* '<S60>/MATLAB System1' */
+  DW_MATLABSystem2_MicroMouseTe_T MATLABSystem2_ci;/* '<S62>/MATLAB System2' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem1_ci;/* '<S60>/MATLAB System1' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem2_c;/* '<S60>/MATLAB System1' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem1_c;/* '<S60>/MATLAB System1' */
@@ -160,6 +173,13 @@ struct P_MATLABSystem1_MicroMouseTem_T_ {
 struct P_MATLABSystem3_MicroMouseTem_T_ {
   real_T MATLABSystem3_InitialCondition;/* Expression: 0
                                          * Referenced by: '<S60>/MATLAB System3'
+                                         */
+};
+
+/* Parameters for system: '<S62>/MATLAB System2' */
+struct P_MATLABSystem2_MicroMouseTem_T_ {
+  real_T MATLABSystem2_InitialCondition;/* Expression: 0
+                                         * Referenced by: '<S62>/MATLAB System2'
                                          */
 };
 
@@ -190,13 +210,16 @@ struct P_MicroMouseTemplate_T_ {
                                         * Referenced by: '<S42>/Out1'
                                         */
   real_T Constant_Value;               /* Expression: 1
+                                        * Referenced by: '<S34>/Constant'
+                                        */
+  real_T UnitDelay_InitialCondition;   /* Expression: 0
+                                        * Referenced by: '<S34>/Unit Delay'
+                                        */
+  real_T Constant_Value_l;             /* Expression: 1
                                         * Referenced by: '<S5>/Constant'
                                         */
   real_T Constant_Value_i;             /* Expression: 1
                                         * Referenced by: '<S8>/Constant'
-                                        */
-  real_T Constant_Value_j;             /* Expression: 1
-                                        * Referenced by: '<S4>/Constant'
                                         */
   int32_T DataStoreMemory2_InitialValue;
                             /* Computed Parameter: DataStoreMemory2_InitialValue
@@ -226,13 +249,25 @@ struct P_MicroMouseTemplate_T_ {
   int16_T Out1_Y0_i;                   /* Computed Parameter: Out1_Y0_i
                                         * Referenced by: '<S46>/Out1'
                                         */
-  uint16_T DataStoreMemory1_InitialValue_j;
-                          /* Computed Parameter: DataStoreMemory1_InitialValue_j
-                           * Referenced by: '<S1>/Data Store Memory1'
+  uint16_T TmpRTBAtMaxofElementsOutport1_I;
+                          /* Computed Parameter: TmpRTBAtMaxofElementsOutport1_I
+                           * Referenced by:
+                           */
+  uint16_T TmpRTBAtMaxofElements7Outport1_;
+                          /* Computed Parameter: TmpRTBAtMaxofElements7Outport1_
+                           * Referenced by:
                            */
   uint16_T Constant_Value_b;           /* Computed Parameter: Constant_Value_b
                                         * Referenced by: '<S57>/Constant'
                                         */
+  uint16_T TmpRTBAtMaxofElements8Outport1_;
+                          /* Computed Parameter: TmpRTBAtMaxofElements8Outport1_
+                           * Referenced by:
+                           */
+  uint16_T TmpRTBAtMaxofElements15Outport1;
+                          /* Computed Parameter: TmpRTBAtMaxofElements15Outport1
+                           * Referenced by:
+                           */
   uint16_T Constant1_Value;            /* Computed Parameter: Constant1_Value
                                         * Referenced by: '<S57>/Constant1'
                                         */
@@ -248,15 +283,19 @@ struct P_MicroMouseTemplate_T_ {
                           /* Computed Parameter: DataStoreMemory2_InitialValue_p
                            * Referenced by: '<S6>/Data Store Memory2'
                            */
+  uint16_T DataStoreMemory1_InitialValue_j;
+                          /* Computed Parameter: DataStoreMemory1_InitialValue_j
+                           * Referenced by: '<S1>/Data Store Memory1'
+                           */
   boolean_T DataStoreMemory_InitialValue_p4;
                           /* Computed Parameter: DataStoreMemory_InitialValue_p4
                            * Referenced by: '<S1>/Data Store Memory'
                            */
-  P_MATLABSystem1_MicroMouseTem_T MATLABSystem6;/* '<S60>/MATLAB System1' */
+  P_MATLABSystem2_MicroMouseTem_T MATLABSystem6;/* '<S62>/MATLAB System2' */
   P_MATLABSystem1_MicroMouseTem_T MATLABSystem5;/* '<S60>/MATLAB System1' */
   P_MATLABSystem1_MicroMouseTem_T MATLABSystem4_c;/* '<S60>/MATLAB System1' */
   P_MATLABSystem1_MicroMouseTem_T MATLABSystem3_c;/* '<S60>/MATLAB System1' */
-  P_MATLABSystem1_MicroMouseTem_T MATLABSystem2_ci;/* '<S60>/MATLAB System1' */
+  P_MATLABSystem2_MicroMouseTem_T MATLABSystem2_ci;/* '<S62>/MATLAB System2' */
   P_MATLABSystem1_MicroMouseTem_T MATLABSystem1_ci;/* '<S60>/MATLAB System1' */
   P_MATLABSystem1_MicroMouseTem_T MATLABSystem2_c;/* '<S60>/MATLAB System1' */
   P_MATLABSystem1_MicroMouseTem_T MATLABSystem1_c;/* '<S60>/MATLAB System1' */
@@ -281,6 +320,10 @@ struct tag_RTM_MicroMouseTemplate_T {
     struct {
       uint8_T TID[2];
     } TaskCounters;
+
+    struct {
+      boolean_T TID0_1;
+    } RateInteraction;
   } Timing;
 };
 
@@ -305,10 +348,10 @@ extern real32_T IMU_Accel[3];          /* '<S7>/Data Store Memory' */
 extern real32_T IMU_Gyro[3];           /* '<S7>/Data Store Memory1' */
 extern int32_T currTicksRS;            /* '<S1>/Data Store Memory2' */
 extern int32_T currTicksLS;            /* '<S1>/Data Store Memory4' */
-extern uint16_T Thresholds[8];         /* '<S1>/Data Store Memory1' */
 extern uint16_T ADC1s[9];              /* '<S6>/Data Store Memory' */
 extern uint16_T ADC_H[9];              /* '<S6>/Data Store Memory1' */
 extern uint16_T ADC_L[9];              /* '<S6>/Data Store Memory2' */
+extern uint16_T Thresholds[8];         /* '<S1>/Data Store Memory1' */
 extern boolean_T Detections[8];        /* '<S1>/Data Store Memory' */
 
 /* External function called from main */
@@ -328,13 +371,9 @@ extern volatile boolean_T runModel;
 /*-
  * These blocks were eliminated from the model due to optimizations:
  *
- * Block '<S34>/Constant' : Unused code path elimination
- * Block '<S34>/Sum' : Unused code path elimination
- * Block '<S34>/Unit Delay' : Unused code path elimination
+ * Block '<S4>/Constant1' : Unused code path elimination
  * Block '<S57>/Cast1' : Eliminate redundant data type conversion
  * Block '<S57>/Cast3' : Eliminate redundant data type conversion
- * Block '<S62>/Rate Transition' : Eliminated since input and output rates are identical
- * Block '<S62>/Rate Transition1' : Eliminated since input and output rates are identical
  */
 
 /*-

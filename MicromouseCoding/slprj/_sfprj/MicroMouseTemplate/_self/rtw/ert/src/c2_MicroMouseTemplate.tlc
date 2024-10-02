@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   10 \
+    NumChartData   5 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -28,34 +28,6 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "is_Calibration"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "Calibration"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_EndCalibration"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "Calibration.EndCalibration"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_VeerLeft"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "Calibration.VeerLeft"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_VeerRight"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "Calibration.VeerRight"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
       Name         "is_LineFollowing"\
       Description  "StateActiveChild"\
       SFName       ""\
@@ -71,13 +43,6 @@
     }\
     ChartData {\
       Name         "temporalCounter_i1"\
-      Description  "TemporalCounter"\
-      SFName       ""\
-      Path         ""\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "temporalCounter_i2"\
       Description  "TemporalCounter"\
       SFName       ""\
       Path         ""\
