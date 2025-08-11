@@ -8,25 +8,25 @@ The aim is to design, build, and program an autonomous maze-solving robot capabl
 ## 📂 Repository Structure
 MM_2024/
 │
-├── MicroMouse Schematics/ # Hardware diagrams and PCB schematics
-│ ├── Motherboard.png
-│ ├── Processor pins.png
-│ ├── Processor.png
-│ ├── motherboard_schematic_v0.5.pdf
-│ └── processor_schematic_0v3.pdf
+├── MicroMouse Schematics/                 # Hardware diagrams and PCB schematics
+│   ├── Motherboard.png
+│   ├── Processor pins.png
+│   ├── Processor.png
+│   ├── motherboard_schematic_v0.5.pdf
+│   └── processor_schematic_0v3.pdf
 │
-├── MicromouseCoding/ # All firmware and simulation models
-│ ├── MicroMouseProgramming/ # Project source code (MATLAB/Simulink)
-│ ├── MicroMouseTemplate_ert_rtw/ # Auto-generated C code from Simulink
-│ ├── slprj/ # Simulink build artifacts
-│ ├── *.slx # Simulink models for subsystems
-│ ├── *.m # MATLAB functions/scripts
-│ ├── *.elf / *.bin / *.hex # Compiled firmware for flashing
-│ ├── *.mlx # MATLAB Live Scripts
-│ └── debug.log # Debug output
+├── MicromouseCoding/                       # All firmware and simulation models
+│   ├── MicroMouseProgramming/              # Project source code (MATLAB/Simulink)
+│   ├── MicroMouseTemplate_ert_rtw/         # Auto-generated C code from Simulink
+│   ├── slprj/                               # Simulink build artifacts
+│   ├── *.slx                                # Simulink models for subsystems
+│   ├── *.m                                  # MATLAB functions/scripts
+│   ├── *.elf / *.bin / *.hex                # Compiled firmware for flashing
+│   ├── *.mlx                                # MATLAB Live Scripts
+│   └── debug.log                            # Debug output
 │
 ├── .gitattributes
-└── FlashThisInProgrammer.elf # Pre-built firmware image
+└── FlashThisInProgrammer.elf               # Pre-built firmware image
 
 ---
 
