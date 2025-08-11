@@ -1,6 +1,6 @@
-# MM_2024 – MicroMouse Project
+# MM_2024 – Micro-Mouse Project
 
-This repository contains the hardware schematics and embedded control software for the **MicroMouse 2024** project.  
+This repository contains the hardware schematics and embedded control software for the **Micro-Mouse 2024** project.  
 The aim is to design, build, and program an autonomous maze-solving robot capable of navigating from a start point to the goal in the shortest possible time.
 
 ---
